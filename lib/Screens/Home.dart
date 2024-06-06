@@ -84,7 +84,7 @@ class _HomeState extends State<Home> {
               title: Align(
                 alignment: Alignment.centerRight,
                 child: Text(
-                  '${profile.profileResult.profileModel!.data!.user!.username}',
+                  'Yusef Hassan',
                   style: TextStyle(
                       color: Colors.blue, fontFamily: 'Bein', letterSpacing: 1),
                   textAlign: TextAlign.right,

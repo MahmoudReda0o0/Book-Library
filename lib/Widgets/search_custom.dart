@@ -40,7 +40,9 @@ class SearchCustom extends StatelessWidget {
                   child: Text('Nothing Found'),
                 );
               } else {
-                return Expanded(
+                return Container(
+                  height: MediaQuery.of(context).size.height * 0.4,
+                  width: MediaQuery.sizeOf(context).width,
                   child: ListView.builder(
                     itemCount: searchProvider
                         .searchReasultApi.searchModel.data!.books!.length,

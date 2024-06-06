@@ -79,10 +79,25 @@ class _SignInState extends State<SignIn> {
 
   @override
   Widget build(BuildContext context) {
+    _loginV2() {
+      Provider.of<ProfileProvider>(context, listen: false).getData();
+      Provider.of<RecommendProvider>(context, listen: false).getData();
+      Provider.of<MyBookProvider>(context, listen: false).getData();
+      Provider.of<CategoryProvider>(context, listen: false)
+          .getData('enim-sed-natus-rerum-asperiores');
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => Screen(),
+        ),
+      );
+    }
+
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
         floatingActionButton: FloatingActionButton(
+          //340
           onPressed: () async {
             Provider.of<ProfileProvider>(context, listen: false).getData();
             Provider.of<RecommendProvider>(context, listen: false).getData();
@@ -313,6 +328,7 @@ class _SignInState extends State<SignIn> {
                                 //   Navigator.pushReplacementNamed(
                                 //       context, 'screen');
                                 // },
+
                                 onTap:
                                     _login, // Call _login function when tapped
 

@@ -107,13 +107,11 @@ class _UserState extends State<User> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            _userData?.username ??
-                                '${profile!.username}', // Display username if available
+                            'Yusef Hassan', // Display username if available
                             style: TextStyle(color: Colors.blueAccent),
                           ),
                           Text(
-                            _userData?.email ??
-                                '${profile!.email}', // Display email if available
+                            'yusefhasan1321@gmail.com', // Display email if available
                             style: TextStyle(
                                 color: Colors.grey, fontSize: 12, height: 1),
                           ),
